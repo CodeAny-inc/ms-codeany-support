@@ -1,0 +1,29 @@
+# Ignore MkDocs build directory
+/site
+
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore generated HTML files
+/docs/assets/*.html
+/docs/assets/CodeAny Support Center_files
+
+# Ignore generated documentation
+/doc
+
+# Ignore editor/IDE configuration files
+*.swp
+*.swo
+*.sublime-workspace
+.vscode/
+.idea/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment-specific settings
+.env
+
+# Ignore build files
+/build

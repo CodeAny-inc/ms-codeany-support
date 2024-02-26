@@ -1,0 +1,83 @@
+site_name: CodeAny Support Center
+docs_dir: docs/
+exclude_docs: overrides/
+
+copyright: Copyright © 2024 CodeAny
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/logo-codeany.png
+  favicon: assets/icon.png
+  features:
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - navigation.tabs
+
+extra_css:
+  - assets/css/main.css
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+          site_name: "CodeAny Support Center"
+        - locale: az
+          name: Azərbaycan dili
+          build: true
+          site_name: "CodeAny'in dəstək mərkəzi"
+          nav_translations:
+            Main page: Əsas səhifə
+            Sign up: Hesabın yaradılması
+            Competitions: Yarışmalar
+        - locale: ru
+          name: Русский язык
+          build: true
+          site_name: "Центр поддержки CodeAny"
+          nav_translations:
+            Main page: Главная страница
+            Sign up: Создание аккаунта
+            Competitions: Соревнования
+
+         
+
+nav:
+    - Main page: index.md
+    - Sign up: sign-up.md
+    - Competitions: competitions.md
+        
+
+
+
+dev_addr: 0.0.0.0:8001
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+
